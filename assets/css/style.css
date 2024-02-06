@@ -3,7 +3,7 @@
 /* Outfit (thin) */
 @font-face {
   font-family: "Outfit";
-  src: url("assets/font/Outfit-Thin.ttf") format("truetype");
+  src: url("../font/Outfit-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: block;
@@ -12,7 +12,7 @@
 /* Outfit (extra light) */
 @font-face {
     font-family: "Outfit";
-    src: url("assets/font/Outfit-ExtraLight.ttf") format("truetype");
+    src: url("../font/Outfit-ExtraLight.ttf") format("truetype");
     font-weight: 200;
     font-style: normal;
     font-display: block;
@@ -21,7 +21,7 @@
 /* Outfit (light) */
 @font-face {
     font-family: "Outfit";
-    src: url("assets/font/Outfit-Light.ttf") format("truetype");
+    src: url("../font/Outfit-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
     font-display: block;
@@ -30,7 +30,7 @@
 /* Outfit (regular) */
 @font-face {
     font-family: "Outfit";
-    src: url("assets/font/Outfit-Regular.ttf") format("truetype");
+    src: url("../font/Outfit-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: block;
@@ -39,7 +39,7 @@
 /* Outfit (medium) */
 @font-face {
     font-family: "Outfit";
-    src: url("assets/font/Outfit-Medium.ttf") format("truetype");
+    src: url("../font/Outfit-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
     font-display: block;
@@ -48,7 +48,7 @@
 /* Outfit (semi bold) */
 @font-face {
     font-family: "Outfit";
-    src: url("assets/font/Outfit-SemiBold.ttf") format("truetype");
+    src: url("../font/Outfit-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
     font-display: block;
@@ -57,7 +57,7 @@
 /* Outfit (bold) */
 @font-face {
     font-family: "Outfit";
-    src: url("assets/font/Outfit-Bold.ttf") format("truetype");
+    src: url("../font/Outfit-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
     font-display: block;
@@ -66,7 +66,7 @@
 /* Outfit (extra bold) */
 @font-face {
     font-family: "Outfit";
-    src: url("assets/font/Outfit-ExtraBold.ttf") format("truetype");
+    src: url("../font/Outfit-ExtraBold.ttf") format("truetype");
     font-weight: 800;
     font-style: normal;
     font-display: block;
@@ -75,7 +75,7 @@
 /* Outfit (extra black) */
 @font-face {
     font-family: "Outfit";
-    src: url("assets/font/Outfit-Black.ttf") format("truetype");
+    src: url("../font/Outfit-Black.ttf") format("truetype");
     font-weight: 900;
     font-style: normal;
     font-display: block;
@@ -94,7 +94,7 @@
 
 /* styles used for the "attribution" component at the bottom of the page */
 .attribution {
-    font-size: 11px;
+    font-size: 12px;
     text-align: center;
 }
 
@@ -115,43 +115,70 @@ body {
     flex-direction: column;
     justify-content: space-between;
     font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px 0;
 }
 
 /* container to split the actual content and the attribution block*/
 #Challenge_container {
-
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* top parent container for the qr code component */
 .qrcode-component {
+    --max-size-qr-component:300px;
+
     background-color: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 15px 15px 45px 15px;
+    border-radius: 15px;
+    max-width: var(--max-size-qr-component);
+    gap: 25px;
+    box-shadow: 0px 3px 30px 0px rgba(31, 50, 81, 0.10);
 }
 
 /* mid container to isolate the qr code */
 .qrcode-code-container {
-
+    width: fit-content;
+    height: fit-content;
 }
 
 /* img element containing the qr code */
 .qrcode-code {
-
+    width: 100%;
+    height: 100%;
+    max-width: var(--max-size-qr-component);;
+    max-height: var(--max-size-qr-component);;
+    border-radius: 10px;
 }
 
 /* mid container to isolate the text of the qr code component */
 .qrcode-desc-container {
-
+    text-align: center;
+    padding: 0 18px;
 }
 
 /* text title in qr code component */
 .qrcode-title {
-
+    font-size: 23px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin: 0 0 18px 0;
 }
 
 /* regular text in qr code component */
 .qrcode-desc {
-
+    color: var(--grayish-blue);
+    margin: 0;
 }
