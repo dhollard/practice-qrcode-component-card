@@ -1,7 +1,157 @@
+/* Adding fonts (actual files avoid future breakage because of a dead link) */
+
+/* Outfit (thin) */
+@font-face {
+  font-family: "Outfit";
+  src: url("assets/font/Outfit-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: block;
+}
+
+/* Outfit (extra light) */
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/font/Outfit-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: block;
+}
+
+/* Outfit (light) */
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/font/Outfit-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: block;
+}
+
+/* Outfit (regular) */
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/font/Outfit-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+/* Outfit (medium) */
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/font/Outfit-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}
+
+/* Outfit (semi bold) */
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/font/Outfit-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: block;
+}
+
+/* Outfit (bold) */
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/font/Outfit-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+}
+
+/* Outfit (extra bold) */
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/font/Outfit-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: block;
+}
+
+/* Outfit (extra black) */
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/font/Outfit-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: block;
+}
+
+
+:root {
+    /* color variables */  
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+    --background-blue:hsl(212, 45%, 89%);
+}
+
+
+/* styles used for the "attribution" component at the bottom of the page */
 .attribution {
-    font-size: 11px; text-align: center;
+    font-size: 11px;
+    text-align: center;
 }
 
 .attribution a {
     color:#FF6666;
+}
+
+/* global page container */
+body {
+    min-width: 100vw;
+    width: 100%;
+    min-height: 95vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* container to split the actual content and the attribution block*/
+#Challenge_container {
+
+}
+
+/* top parent container for the qr code component */
+.qrcode-component {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* mid container to isolate the qr code */
+.qrcode-code-container {
+
+}
+
+/* img element containing the qr code */
+.qrcode-code {
+
+}
+
+/* mid container to isolate the text of the qr code component */
+.qrcode-desc-container {
+
+}
+
+/* text title in qr code component */
+.qrcode-title {
+
+}
+
+/* regular text in qr code component */
+.qrcode-desc {
+
 }
