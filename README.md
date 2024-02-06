@@ -43,5 +43,5 @@ How to handle a Frontend Mentor challenge from start to finish.
 
 ## Author
 
-- Website - [darius-hollard.com](https://www.your-site.com)
+- Website - [darius-hollard.com](https://darius-hollard.com/)
 - Frontend Mentor - [@dhollard](https://www.frontendmentor.io/profile/dhollard)
